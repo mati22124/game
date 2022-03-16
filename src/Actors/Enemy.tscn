@@ -6,8 +6,8 @@
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 47.5, 27 )
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 46.75, 10.5328 )
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 53, 12.5 )
 
 [sub_resource type="OccluderPolygon2D" id=4]
 polygon = PoolVector2Array( -71.7949, -115, 5.12821, -125, 92.3077, -105, 148.718, -80, 194.872, -35, 225.641, -25, 225.641, 10, 282.051, 35, 241.026, 65, 194.872, 50, 246.154, 120, 205.128, 155, 148.718, 155, 92.3077, 160, 97.4359, 125, 25.641, 125, -25.641, 125, -66.6667, 115, -112.82, 140, -112.82, 170, -215.385, 155, -230.769, 120, -220.513, 80, -205.128, 50, -225.641, 25, -251.282, 10, -297.436, -15, -302.564, -65, -297.436, -105, -282.051, -135, -256.41, -175, -210.256, -190, -174.359, -190, -143.59, -175 )
@@ -26,8 +26,8 @@ position = Vector2( 0, -66.4549 )
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompArea2D"]
-position = Vector2( -3.75, 5.4549 )
-shape = SubResource( 3 )
+position = Vector2( -5, 0.954903 )
+shape = SubResource( 5 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
 position = Vector2( -3.5, -35.5 )
@@ -36,12 +36,12 @@ rect = Rect2( -50, -33, 100, 66 )
 process_parent = true
 physics_process_parent = true
 
-[node name="1449722324" type="Sprite" parent="."]
+[node name="Turtle" type="Sprite" parent="."]
 position = Vector2( -1, -33 )
 scale = Vector2( 0.195, 0.2 )
 texture = ExtResource( 2 )
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="1449722324"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Turtle"]
 occluder = SubResource( 4 )
 
 [connection signal="area_entered" from="StompArea2D" to="." method="_on_StompArea2D_area_entered"]
