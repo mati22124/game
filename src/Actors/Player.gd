@@ -20,6 +20,10 @@ func _physics_process(delta: float) -> void:
 	_velocity = move_and_slide_with_snap(
 		_velocity, snap, FLOOR_NORMAL, true
 	)
+	if Input.get_action_strength("move_right")==1:
+		$Sprite.flip_h=true
+	else:
+		$Sprite.flip_h=false
 
 
 func get_direction() -> Vector2:
