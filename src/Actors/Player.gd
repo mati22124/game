@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 	)
 	if Input.get_action_strength("move_right")==1:
 		$Sprite.flip_h=true
-	else:
+	elif Input.get_action_strength("move_left")==1:
 		$Sprite.flip_h=false
 
 

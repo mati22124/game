@@ -17,6 +17,9 @@ margin_bottom = 2464.0
 rect_scale = Vector2( 0.44, 0.44 )
 texture = ExtResource( 2 )
 stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Title" parent="." instance=ExtResource( 3 )]
 anchor_left = 0.5
