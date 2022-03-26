@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://backgroundjungle1.png" type="Texture" id=3]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Objects/Portal2D.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Screens/EndScreen.tscn" type="PackedScene" id=6]
 
 [node name="Level02" type="Node2D"]
 
@@ -26,7 +28,7 @@ tile_set = ExtResource( 2 )
 collision_layer = 4
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( -983065, 0, 0, 1048651, 1, 0, 1245259, 1, 0, 1441867, 1, 0, 1704036, 0, 0, 3801088, 0, 0, 3801089, 0, 0, 3801090, 0, 0, 3801091, 0, 0, 3801092, 0, 0, 3801093, 0, 0, 3801094, 0, 0, 3801095, 0, 0, 3801096, 0, 0, 3801097, 0, 0, 3801098, 0, 0, 3801099, 0, 0, 3801100, 0, 0, 3801101, 0, 0, 3801102, 0, 0, 3801103, 0, 0, 3801104, 0, 0, 3801105, 0, 0, 3801106, 0, 0, 3801107, 0, 0, 3801108, 0, 0, 3801109, 0, 0, 3801110, 0, 0, 3801111, 0, 0, 3801112, 0, 0, 3866644, 0, 0, 3866645, 0, 0 )
+tile_data = PoolIntArray( -983065, 0, 0, 0, 536870914, 0, 65536, 536870914, 0, 131072, 536870914, 0, 196608, 536870914, 0, 262144, 536870914, 0, 327680, 536870914, 0, 393216, 536870914, 0, 458752, 536870914, 0, 524288, 536870914, 0, 589824, 536870914, 0, 655360, 536870914, 0, 720896, 536870914, 0, 1048651, 1, 0, 1245259, 1, 0, 1441867, 1, 0, 1704036, 0, 0, 3801088, 0, 0, 3801089, 0, 0, 3801090, 0, 0, 3801091, 0, 0, 3801092, 0, 0, 3801093, 0, 0, 3801094, 0, 0, 3801095, 0, 0, 3801096, 0, 0, 3801097, 0, 0, 3801098, 0, 0, 3801099, 0, 0, 3801100, 0, 0, 3801101, 0, 0, 3801102, 0, 0, 3801103, 0, 0, 3801104, 0, 0, 3801105, 0, 0, 3801106, 0, 0, 3801107, 0, 0, 3801108, 0, 0, 3801109, 0, 0, 3801110, 0, 0, 3801111, 0, 0, 3801112, 0, 0, 3866644, 0, 0, 3866645, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 180, 480 )
@@ -37,5 +39,9 @@ limit_right = 6080
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="Enemies" type="Node2D" parent="."]
+
+[node name="Portal2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1728, 553 )
+next_scene = ExtResource( 6 )
 
 [editable path="Player"]
